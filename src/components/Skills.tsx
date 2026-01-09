@@ -1,8 +1,26 @@
 import React from 'react';
 import './Skills.css';
 
-const Skills = () => {
-  const skillCategories = [
+interface Skill {
+  name: string;
+  level: number;
+}
+
+interface SkillCategory {
+  category: string;
+  icon: string;
+  skills: Skill[];
+}
+
+interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+  icon: string;
+}
+
+const Skills: React.FC = () => {
+  const skillCategories: SkillCategory[] = [
     {
       category: 'Frontend',
       icon: '🎨',
@@ -58,7 +76,7 @@ const Skills = () => {
     }
   ];
 
-  const certifications = [
+  const certifications: Certification[] = [
     {
       name: 'Sitecore Experience Solution 10 Developer',
       issuer: 'Sitecore',

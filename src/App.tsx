@@ -9,12 +9,14 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-function App() {
-  const [activeSection, setActiveSection] = useState('home');
+type SectionId = 'home' | 'about' | 'experience' | 'skills' | 'education' | 'contact';
+
+const App: React.FC = () => {
+  const [activeSection, setActiveSection] = useState<SectionId>('home');
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'skills', 'education', 'contact'];
+    const handleScroll = (): void => {
+      const sections: SectionId[] = ['home', 'about', 'experience', 'skills', 'education', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -49,6 +51,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

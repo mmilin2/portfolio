@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
-const Hero = () => {
-  const [displayText, setDisplayText] = useState('');
-  const roles = [
+const Hero: React.FC = () => {
+  const [displayText, setDisplayText] = useState<string>('');
+  const roles: readonly string[] = [
     'Senior Software Engineer',
     'UI Development Specialist',
     'Full-Stack Developer',
     'React & TypeScript Expert',
     'Performance Optimizer'
-  ];
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
+  ] as const;
+  const [currentRoleIndex, setCurrentRoleIndex] = useState<number>(0);
+  const [isDeleting, setIsDeleting] = useState<boolean>(false);
 
   useEffect(() => {
     const currentRole = roles[currentRoleIndex];
@@ -35,12 +35,18 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentRoleIndex, roles]);
 
-  const scrollToContact = () => {
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  const scrollToContact = (): void => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
-  const scrollToExperience = () => {
-    document.getElementById('experience').scrollIntoView({ behavior: 'smooth' });
+  const scrollToExperience = (): void => {
+    const element = document.getElementById('experience');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (

@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import './Experience.css';
 
-const Experience = () => {
-  const [activeJob, setActiveJob] = useState(0);
+interface ExperienceData {
+  company: string;
+  title: string;
+  location: string;
+  period: string;
+  highlights: string[];
+  tech: string[];
+}
 
-  const experiences = [
+const Experience: React.FC = () => {
+  const [activeJob, setActiveJob] = useState<number>(0);
+
+  const experiences: ExperienceData[] = [
     {
       company: 'Specialty Program Group',
       title: 'Senior Software Engineer (UI Lead)',

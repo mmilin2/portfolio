@@ -1,8 +1,17 @@
 import React from 'react';
 import './Education.css';
 
-const Education = () => {
-  const education = [
+interface EducationData {
+  degree: string;
+  school: string;
+  location: string;
+  period: string;
+  icon: string;
+  highlights: string[];
+}
+
+const Education: React.FC = () => {
+  const education: EducationData[] = [
     {
       degree: 'Master of Science, Computer Science',
       school: 'University of Illinois at Chicago',
