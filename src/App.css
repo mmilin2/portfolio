@@ -1,22 +1,11 @@
 .App {
-  min-height: 100vh;
-  background-color: var(--darker-bg);
+  @apply min-h-screen bg-dark-darker;
 }
 
 main {
-  position: relative;
-  z-index: 1;
+  @apply relative z-10;
 }
 
 section {
-  min-height: 100vh;
-  padding: 6rem 0;
-  position: relative;
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 4rem 0;
-    min-height: auto;
-  }
+  @apply min-h-screen py-24 md:py-16 md:min-h-0 relative;
 }

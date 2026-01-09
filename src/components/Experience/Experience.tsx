@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-import './Experience.css';
-
-interface ExperienceData {
-  company: string;
-  title: string;
-  location: string;
-  period: string;
-  highlights: string[];
-  tech: string[];
-}
+import { ExperienceData } from './types';
 
 const Experience: React.FC = () => {
   const [activeJob, setActiveJob] = useState<number>(0);
@@ -83,20 +74,24 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="experience">
-      <div className="container">
-        <div className="section-header">
-          <span className="section-number">02.</span>
-          <h2 className="section-title">Experience</h2>
-          <div className="section-line"></div>
+    <section id="experience" className="py-24 px-8 bg-dark-darker">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="flex items-center gap-4 mb-12">
+          <span className="text-success font-mono text-xl">02.</span>
+          <h2 className="text-text-primary text-3xl font-bold m-0 whitespace-nowrap">Experience</h2>
+          <div className="h-[1px] bg-dark-light flex-1 ml-4"></div>
         </div>
 
-        <div className="experience-content">
-          <div className="company-tabs">
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex md:flex-col overflow-x-auto md:overflow-visible md:min-w-[200px] border-b-2 md:border-b-0 md:border-l-2 border-dark-light">
             {experiences.map((exp, index) => (
               <button
                 key={index}
-                className={`company-tab ${activeJob === index ? 'active' : ''}`}
+                className={`px-6 py-3 text-left bg-transparent border-none cursor-pointer font-mono text-sm transition-all duration-300 whitespace-nowrap md:border-l-2 border-b-2 md:border-b-0 ${
+                  activeJob === index
+                    ? 'text-success bg-dark-light/30 md:border-l-success border-b-success'
+                    : 'text-text-muted hover:text-success hover:bg-dark-light/20 md:border-l-transparent border-b-transparent'
+                }`}
                 onClick={() => setActiveJob(index)}
               >
                 {exp.company}
@@ -104,26 +99,38 @@ const Experience: React.FC = () => {
             ))}
           </div>
 
-          <div className="job-details">
-            <div className="job-header">
-              <h3 className="job-title">
-                {experiences[activeJob].title}
-                <span className="job-company"> @ {experiences[activeJob].company}</span>
-              </h3>
-              <p className="job-period">{experiences[activeJob].period}</p>
-              <p className="job-location">{experiences[activeJob].location}</p>
-            </div>
+          <div className="flex-1 min-h-[400px]">
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <h3 className="text-text-primary text-2xl font-semibold m-0">
+                  {experiences[activeJob].title}
+                  <span className="text-success"> @ {experiences[activeJob].company}</span>
+                </h3>
+                <p className="text-text-muted text-sm font-mono m-0">{experiences[activeJob].period}</p>
+                <p className="text-text-secondary text-sm m-0">{experiences[activeJob].location}</p>
+              </div>
 
-            <ul className="job-highlights">
-              {experiences[activeJob].highlights.map((highlight, index) => (
-                <li key={index}>{highlight}</li>
-              ))}
-            </ul>
+              <ul className="space-y-4 pl-5">
+                {experiences[activeJob].highlights.map((highlight, index) => (
+                  <li
+                    key={index}
+                    className="text-text-secondary text-base leading-relaxed relative before:content-['▹'] before:absolute before:-left-5 before:text-success before:text-xl before:leading-3"
+                  >
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
 
-            <div className="job-tech">
-              {experiences[activeJob].tech.map((tech, index) => (
-                <span key={index} className="tech-tag">{tech}</span>
-              ))}
+              <div className="flex flex-wrap gap-2 pt-4">
+                {experiences[activeJob].tech.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1.5 bg-dark-light text-success text-xs font-mono rounded border border-success/30 transition-all duration-300 hover:bg-success/10 hover:border-success"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
