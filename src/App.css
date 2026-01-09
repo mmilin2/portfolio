@@ -1,0 +1,22 @@
+.App {
+  min-height: 100vh;
+  background-color: var(--darker-bg);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  min-height: 100vh;
+  padding: 6rem 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+    min-height: auto;
+  }
+}
