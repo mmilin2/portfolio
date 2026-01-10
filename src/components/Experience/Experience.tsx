@@ -6,10 +6,28 @@ const Experience: React.FC = () => {
 
   const experiences: ExperienceData[] = [
     {
+      company: 'Costco Travel',
+      title: 'Onsite Coordinator / Tech Lead (Contract)',
+      location: 'Issaquah, WA',
+      period: 'Sep 2024 - Present',
+      highlights: [
+        'Lead and manage distributed development team (4 offshore engineers), acting as primary bridge between onsite stakeholders and offshore execution teams',
+        'Own sprint planning, work decomposition, prioritization, and delivery coordination across geographies',
+        'Re-structured cross-team communication and requirement-grooming processes, enforcing clearer ownership and acceptance criteria',
+        'Drove offshore team performance through regular 1:1s and targeted mentoring, achieving ~15% increase in average throughput (6-8 additional story points over 12 months)',
+        'Improved onsite team delivery efficiency by ~3 story points per sprint through optimized task allocation',
+        'Established strong individual ownership of features and microservices, improving accountability and code quality',
+        'Hands-on contributor across backend and frontend systems, owning and delivering features in production',
+        'Top-8 finalist in internal hackathon for building AI-based tool to summarize error logs and generate RCAs',
+        'Regularly present on code quality standards, design principles, and engineering best practices'
+      ],
+      tech: ['Java', 'Spring', 'Hibernate', 'Node.js', 'React', 'TypeScript', 'JavaScript', 'JSP']
+    },
+    {
       company: 'Specialty Program Group',
       title: 'Senior Software Engineer (UI Lead)',
       location: 'Chicago, IL',
-      period: 'March 2022 - Present',
+      period: 'March 2022 - Sep 2024',
       highlights: [
         'Developed and maintained top-of-funnel websites using Sitecore, React, Redux, TypeScript, HTML, CSS, and C#',
         'Full ownership of UI products including component library setup using NextJS, Webpack, Sitecore JSS, NPM, and Storybook',

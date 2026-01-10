@@ -21,14 +21,15 @@ const Skills: React.FC = () => {
       category: 'Backend',
       icon: '⚙️',
       skills: [
+        { name: 'Java', level: 85 },
         { name: 'C# / .NET', level: 85 },
         { name: 'Node.js', level: 85 },
-        { name: 'Java', level: 80 },
         { name: 'Python', level: 75 },
         { name: 'RESTful APIs', level: 90 },
         { name: 'GraphQL', level: 80 },
         { name: 'Express.js', level: 85 },
-        { name: 'Spring Boot', level: 75 }
+        { name: 'Spring Boot', level: 85 },
+        { name: 'Hibernate', level: 80 }
       ]
     },
     {
@@ -129,7 +130,13 @@ const Skills: React.FC = () => {
           <h3 className="text-text-primary text-2xl font-semibold mb-6">Additional Expertise</h3>
           <div className="flex flex-wrap gap-3">
             <span className="px-4 py-2 bg-dark-light text-text-secondary text-sm rounded-full border border-dark-light transition-all duration-300 hover:border-success hover:text-success hover:shadow-[0_0_15px_rgba(100,255,218,0.15)]">
-              Responsive Web Design
+              Team Leadership
+            </span>
+            <span className="px-4 py-2 bg-dark-light text-text-secondary text-sm rounded-full border border-dark-light transition-all duration-300 hover:border-success hover:text-success hover:shadow-[0_0_15px_rgba(100,255,218,0.15)]">
+              Sprint Planning & Coordination
+            </span>
+            <span className="px-4 py-2 bg-dark-light text-text-secondary text-sm rounded-full border border-dark-light transition-all duration-300 hover:border-success hover:text-success hover:shadow-[0_0_15px_rgba(100,255,218,0.15)]">
+              Mentoring & Coaching
             </span>
             <span className="px-4 py-2 bg-dark-light text-text-secondary text-sm rounded-full border border-dark-light transition-all duration-300 hover:border-success hover:text-success hover:shadow-[0_0_15px_rgba(100,255,218,0.15)]">
               Performance Optimization
@@ -142,6 +149,9 @@ const Skills: React.FC = () => {
             </span>
             <span className="px-4 py-2 bg-dark-light text-text-secondary text-sm rounded-full border border-dark-light transition-all duration-300 hover:border-success hover:text-success hover:shadow-[0_0_15px_rgba(100,255,218,0.15)]">
               Agile/Scrum
+            </span>
+            <span className="px-4 py-2 bg-dark-light text-text-secondary text-sm rounded-full border border-dark-light transition-all duration-300 hover:border-success hover:text-success hover:shadow-[0_0_15px_rgba(100,255,218,0.15)]">
+              Responsive Web Design
             </span>
             <span className="px-4 py-2 bg-dark-light text-text-secondary text-sm rounded-full border border-dark-light transition-all duration-300 hover:border-success hover:text-success hover:shadow-[0_0_15px_rgba(100,255,218,0.15)]">
               UI/UX Design

@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState<string>('');
   const roles: readonly string[] = [
+    'Tech Lead & Onsite Coordinator',
     'Senior Software Engineer',
-    'UI Development Specialist',
     'Full-Stack Developer',
     'React & TypeScript Expert',
-    'Performance Optimizer'
+    'Team Performance Coach'
   ] as const;
   const [currentRoleIndex, setCurrentRoleIndex] = useState<number>(0);
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
@@ -85,29 +85,29 @@ const Hero: React.FC = () => {
             <span className="text-success animate-blink">|</span>
           </h2>
           <p className="text-xl md:text-base leading-relaxed text-text-muted mb-12 max-w-[700px] animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:backwards]">
-            Crafting exceptional user experiences with React, TypeScript, and modern web technologies.
-            Specialized in building scalable, performant applications that make a difference.
+            Tech Lead and Full-Stack Engineer driving team performance and technical excellence.
+            Specialized in building scalable applications while mentoring distributed teams to deliver exceptional results.
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 md:grid-cols-1 md:gap-4 mb-12 animate-fade-in-up [animation-delay:0.8s] [animation-fill-mode:backwards]">
             <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
               <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                8+
+                11+
               </span>
               <span className="block text-sm text-text-secondary font-medium">Years Experience</span>
             </div>
             <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
               <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                35-40%
+                15%
               </span>
-              <span className="block text-sm text-text-secondary font-medium">Performance Boost</span>
+              <span className="block text-sm text-text-secondary font-medium">Team Throughput Increase</span>
             </div>
             <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
               <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                300+
+                4
               </span>
-              <span className="block text-sm text-text-secondary font-medium">Microservices</span>
+              <span className="block text-sm text-text-secondary font-medium">Offshore Engineers Led</span>
             </div>
           </div>
 
