@@ -1,178 +1,123 @@
-# Milind - Personal Portfolio Website
+# Milind's Portfolio
 
-A modern, responsive single-page application (SPA) showcasing professional experience, skills, and education. Built with React and designed for deployment to GitHub Pages.
+> Tech Lead & Full-Stack Engineer specializing in building scalable applications and leading high-performing distributed teams.
 
-## Features
-
-- **Modern Design**: Clean, professional interface with smooth animations and transitions
-- **Fully Responsive**: Optimized for all devices - desktop, tablet, and mobile
-- **Interactive Components**: Dynamic typing effect, smooth scrolling navigation, animated skill bars
-- **Performance Optimized**: Fast loading times and smooth animations
-- **SEO Friendly**: Proper meta tags and semantic HTML structure
-
-## Tech Stack
-
-- **React 18**: Modern React with hooks
-- **CSS3**: Custom styling with CSS variables, gradients, and animations
-- **GitHub Pages**: Free, reliable hosting
-
-## Sections
-
-1. **Hero**: Eye-catching introduction with dynamic role typing effect
-2. **About**: Professional summary and key achievements
-3. **Experience**: Detailed work history with interactive company tabs
-4. **Skills**: Comprehensive skill showcase with animated progress bars
-5. **Education**: Academic background with timeline design
-6. **Contact**: Multiple contact methods with social media links
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-- Git
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd milind-portfolio
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm start
-```
-
-The application will open at [http://localhost:3000](http://localhost:3000)
-
-## Deployment to GitHub Pages
-
-### Step 1: Update package.json
-
-Update the `homepage` field in [package.json](package.json) with your GitHub username and repository name:
-
-```json
-"homepage": "https://yourusername.github.io/your-repo-name"
-```
-
-### Step 2: Create GitHub Repository
-
-1. Go to [GitHub](https://github.com) and create a new repository
-2. Name it something like `milind-portfolio` or `portfolio`
-3. Don't initialize with README (we already have one)
-
-### Step 3: Initialize Git and Push
-
-```bash
-# Initialize git (if not already done)
-git init
-
-# Add all files
-git add .
-
-# Commit
-git commit -m "Initial commit: Personal portfolio website"
-
-# Add remote repository
-git remote add origin https://github.com/yourusername/your-repo-name.git
-
-# Push to main branch
-git branch -M main
-git push -u origin main
-```
-
-### Step 4: Deploy to GitHub Pages
-
-```bash
-npm run deploy
-```
-
-This command will:
-1. Build the production version of your app
-2. Push it to the `gh-pages` branch
-3. Make it available at your GitHub Pages URL
-
-### Step 5: Enable GitHub Pages
-
-1. Go to your repository on GitHub
-2. Click on **Settings**
-3. Scroll down to **Pages** section
-4. Under **Source**, select `gh-pages` branch
-5. Click **Save**
-
-Your website will be live at: `https://yourusername.github.io/your-repo-name`
-
-## Customization
-
-### Update Personal Information
-
-1. **Contact Information**: Update email, phone, and location in [src/components/Contact.js](src/components/Contact.js) and [src/components/Hero.js](src/components/Hero.js)
-
-2. **Social Media Links**: Update GitHub, LinkedIn, and Twitter URLs in [src/components/Contact.js](src/components/Contact.js)
-
-3. **Profile Photo**: Replace the placeholder SVG in [src/components/About.js](src/components/About.js) with your actual photo
-
-4. **Resume Content**: Already populated with your information, but you can update any section as needed
-
-### Styling
-
-All styles use CSS variables defined in [src/index.css](src/index.css). Update these to change the color scheme:
-
-```css
-:root {
-  --primary-color: #667eea;
-  --secondary-color: #764ba2;
-  --accent-color: #f093fb;
-  --success-color: #64ffda;
-}
-```
-
-## Available Scripts
-
-### `npm start`
-Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
-
-### `npm run build`
-Builds the app for production to the `build` folder
-
-### `npm run deploy`
-Deploys the built app to GitHub Pages
-
-### `npm test`
-Launches the test runner
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Performance
-
-- Optimized images and assets
-- Lazy loading where applicable
-- Minimal bundle size
-- Smooth animations with CSS transforms
-
-## License
-
-MIT License - feel free to use this template for your own portfolio
-
-## Contact
-
-Milind - [milind.fnu.791@gmail.com](mailto:milind.fnu.791@gmail.com)
-
-Portfolio Link: [https://yourusername.github.io/your-repo-name](https://yourusername.github.io/your-repo-name)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://linkedin.com/in/yourprofile)
+[![Email](https://img.shields.io/badge/Email-Contact-red?style=flat&logo=gmail)](mailto:milind.fnu.791@gmail.com)
+[![Location](https://img.shields.io/badge/Location-Greater%20Seattle%20Area-green?style=flat&logo=google-maps)](https://www.google.com/maps/place/Seattle,+WA/)
 
 ---
 
-**Note**: Remember to update the placeholder URLs and personal information before deploying!
+## 👨‍💻 About Me
+
+I'm a **Tech Lead and Senior Software Engineer** with **11+ years of experience** in full-stack development, specializing in:
+
+- 🎯 Leading distributed engineering teams and driving **15% throughput improvements**
+- ⚛️ Building modern web applications with **React**, **TypeScript**, and **Java/Spring**
+- 🚀 Performance optimization achieving **35-40% core web vitals improvements**
+- 👥 Mentoring engineers and establishing engineering best practices
+- 🏆 Top-8 hackathon finalist for AI-powered developer tools
+
+**Currently:** Onsite Coordinator / Tech Lead at **Costco Travel**, leading 4 offshore engineers and driving sprint execution excellence.
+
+---
+
+## 🛠️ Tech Stack
+
+### Languages & Frameworks
+![TypeScript](https://img.shields.io/badge/TypeScript-Expert-3178C6?style=flat&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Expert-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-Expert-61DAFB?style=flat&logo=react&logoColor=black)
+![Java](https://img.shields.io/badge/Java-Advanced-007396?style=flat&logo=openjdk&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Advanced-339933?style=flat&logo=node.js&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-Advanced-239120?style=flat&logo=c-sharp&logoColor=white)
+
+### Tools & Platforms
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=spring-boot&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+
+---
+
+## 💼 Professional Highlights
+
+### 🎯 Leadership & Team Performance
+- Leading **distributed team of 4 offshore engineers** with focus on sprint planning and delivery
+- Achieved **15% increase in team throughput** through targeted mentoring and process improvements
+- Improved **sprint delivery by 3 story points** through optimized task allocation
+- Established **strong ownership culture** for features and microservices
+
+### 🚀 Technical Excellence
+- **Performance Champion**: Improved core web vitals by 35-40% and search performance by 30%
+- **Efficiency Expert**: Reduced deployment artifact size by 20% through enhanced code reusability
+- **Innovation Leader**: Top-8 hackathon finalist for AI-based error log analysis tool
+- **Architecture**: Contributed to systems supporting 300+ microservices
+
+### 🎓 Education & Certifications
+- **M.S. in Computer Science** - University of Illinois at Chicago
+- **B.Tech in Information Technology** - Guru Gobind Singh Indraprastha University, India
+- **Certified Sitecore Experience Solution 10 Developer**
+
+---
+
+## 📈 Career Journey
+
+```
+2024 - Present  │  Tech Lead @ Costco Travel
+                │  → Leading distributed teams, sprint planning, performance optimization
+                │
+2022 - 2024     │  Senior Software Engineer (UI Lead) @ Specialty Program Group
+                │  → Component libraries, performance optimization, CI/CD
+                │
+2017 - 2022     │  Software Engineer @ Insureon
+                │  → Full-stack development, SaaS products, microservices
+                │
+2016            │  Software Engineer Intern @ Amadeus North America
+                │
+2013 - 2015     │  Software Engineer @ Amadeus Software Labs
+                │  → Test automation, internal tools, web applications
+```
+
+---
+
+## 🎨 This Portfolio
+
+Built with modern web technologies to showcase best practices in software engineering:
+
+- **Frontend**: React 18 + TypeScript for type-safe, maintainable code
+- **Styling**: Tailwind CSS for rapid, responsive design
+- **Architecture**: Component-based with proper separation of concerns
+- **Performance**: Optimized bundle size and lazy loading
+- **Deployment**: Automated CI/CD pipeline to GitHub Pages
+
+---
+
+## 📫 Let's Connect
+
+I'm always interested in discussing:
+- 🤝 Leadership opportunities in engineering teams
+- 💡 Complex technical challenges and scalable solutions
+- 🎓 Mentoring and engineering best practices
+- 🚀 Innovative projects leveraging modern tech stacks
+
+**Email**: [milind.fnu.791@gmail.com](mailto:milind.fnu.791@gmail.com)
+**Phone**: (312) 874-9671
+**Location**: Greater Seattle Area, WA
+
+---
+
+## 📄 License
+
+This portfolio is open source and available under the [MIT License](LICENSE).
+
+---
+
+<div align="center">
+
+**Built with ❤️ using React, TypeScript, and Tailwind CSS**
+
+⭐ Star this repo if you find it helpful!
+
+</div>
