@@ -49,10 +49,6 @@ const About: React.FC = () => {
               and am a <strong className="text-text-primary">certified Sitecore Experience Solution 10 Developer</strong>. I thrive in collaborative
               environments where I can contribute to both technical excellence and team growth.
             </p>
-            <p className="text-text-secondary text-lg leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects,
-              or optimizing build processes to make developers' lives easier.
-            </p>
           </div>
 
           <div className="space-y-6">

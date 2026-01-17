@@ -130,11 +130,11 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in-up [animation-delay:1.2s] [animation-fill-mode:backwards] md:hidden">
-        <div className="w-6 h-10 border-2 border-text-muted rounded-xl relative animate-bounce-slow">
-          <div className="w-[3px] h-2 bg-success rounded absolute top-2 left-1/2 -translate-x-1/2 animate-[scroll_2s_infinite]"></div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in-up [animation-delay:1.2s] [animation-fill-mode:backwards] z-10">
+        <div className="w-6 h-10 border-2 border-text-secondary rounded-full relative">
+          <div className="w-1 h-2 bg-success rounded-full absolute top-2 left-1/2 -translate-x-1/2 animate-scroll"></div>
         </div>
-        <p className="text-xs text-text-muted uppercase tracking-[2px]">Scroll to explore</p>
+        <p className="text-xs text-text-secondary uppercase tracking-[2px]">Scroll</p>
       </div>
     </section>
   );
