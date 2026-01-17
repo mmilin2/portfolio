@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex gap-6 md:flex-col animate-fade-in-up [animation-delay:1s] [animation-fill-mode:backwards]">
+          <div className="flex justify-center gap-6 md:flex-col animate-fade-in-up [animation-delay:1s] [animation-fill-mode:backwards]">
             <button className="btn btn-primary" onClick={scrollToContact}>
               Get In Touch
             </button>
