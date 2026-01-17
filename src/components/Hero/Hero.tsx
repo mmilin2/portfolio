@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 const Hero: React.FC = () => {
-  const [displayText, setDisplayText] = useState<string>('');
-  const roles: readonly string[] = [
+  const roles = useMemo(() => [
     'Tech Lead & Onsite Coordinator',
     'Senior Software Engineer',
     'Full-Stack Developer',
     'React & TypeScript Expert',
     'Team Performance Coach'
-  ] as const;
+  ] as const, []);
+
+  const [displayText, setDisplayText] = useState<string>('');
   const [currentRoleIndex, setCurrentRoleIndex] = useState<number>(0);
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
+
+  // Find the longest role for consistent height
+  const longestRole = useMemo(() =>
+    roles.reduce((a, b) => a.length > b.length ? a : b, ''),
+    [roles]
+  );
 
   useEffect(() => {
     const currentRole = roles[currentRoleIndex];
@@ -48,19 +55,26 @@ const Hero: React.FC = () => {
     }
   };
 
+  const stats = [
+    { value: '40%', label: 'Core Web Vitals Boost' },
+    { value: '300+', label: 'Microservices Supported' },
+    { value: '30%', label: 'Search Performance Gain' },
+    { value: '11+', label: 'Years of Experience' },
+  ];
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Animation */}
-      <div className="absolute top-0 left-0 right-0 bottom-0 overflow-hidden opacity-15">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
+      {/* Background Animation - Hidden on mobile for performance */}
+      <div className="absolute inset-0 overflow-hidden opacity-10 hidden sm:block">
         <div className="absolute w-full h-full">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(15)].map((_, i) => (
             <span
               key={i}
-              className="absolute -top-[20%] font-mono text-2xl text-success opacity-30 animate-fall"
+              className="absolute -top-[20%] font-mono text-xl text-success opacity-30 animate-fall"
               style={{
-                left: `${i * 5}%`,
-                animationDelay: `${i * 0.2}s`,
-                animationDuration: '8s'
+                left: `${i * 7}%`,
+                animationDelay: `${i * 0.3}s`,
+                animationDuration: '10s'
               }}
             >
               {'{'} ...{'}'}
@@ -70,64 +84,70 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-[2] max-w-[1200px] p-8">
-        <div className="max-w-[900px]">
-          <p className="font-mono text-lg text-success mb-4 animate-fade-in-up">
+      <div className="relative z-[2] w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[900px] mx-auto text-center sm:text-left">
+          {/* Greeting */}
+          <p className="font-mono text-base sm:text-lg text-success mb-3 sm:mb-4 animate-fade-in-up">
             Hi, my name is
           </p>
-          <h1 className="text-6xl md:text-5xl sm:text-4xl font-extrabold mb-4 animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:backwards] leading-tight">
+
+          {/* Name */}
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 sm:mb-4 animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:backwards] leading-tight">
             <span className="bg-gradient-to-r from-success via-primary to-accent bg-clip-text text-transparent">
               Milind
             </span>
           </h1>
-          <h2 className="text-5xl md:text-4xl sm:text-2xl font-bold text-text-secondary mb-8 animate-fade-in-up [animation-delay:0.4s] [animation-fill-mode:backwards] min-h-[4rem] sm:min-h-[3rem] flex items-center gap-2">
-            <span className="inline-block">{displayText}</span>
-            <span className="text-success animate-blink">|</span>
-          </h2>
-          <p className="text-xl md:text-base leading-relaxed text-text-muted mb-12 max-w-[700px] animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:backwards]">
+
+          {/* Dynamic Role - Fixed height container to prevent layout shift */}
+          <div className="relative mb-6 sm:mb-8 animate-fade-in-up [animation-delay:0.4s] [animation-fill-mode:backwards]">
+            {/* Invisible text to maintain consistent height */}
+            <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-transparent select-none" aria-hidden="true">
+              {longestRole}
+            </h2>
+            {/* Actual visible text */}
+            <h2 className="absolute inset-0 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-secondary flex items-center justify-center sm:justify-start gap-1 sm:gap-2">
+              <span>{displayText}</span>
+              <span className="text-success animate-blink">|</span>
+            </h2>
+          </div>
+
+          {/* Description */}
+          <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-text-muted mb-8 sm:mb-10 lg:mb-12 max-w-[700px] mx-auto sm:mx-0 animate-fade-in-up [animation-delay:0.6s] [animation-fill-mode:backwards]">
             Tech Lead and Full-Stack Engineer driving team performance and technical excellence.
-            Specialized in building scalable applications while mentoring distributed teams to deliver exceptional results.
+            Specialized in building scalable applications while mentoring distributed teams.
           </p>
 
-          {/* Career Highlights */}
-          <div className="grid grid-cols-4 gap-6 lg:grid-cols-2 md:grid-cols-1 md:gap-4 mb-12 animate-fade-in-up [animation-delay:0.8s] [animation-fill-mode:backwards]">
-            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                40%
-              </span>
-              <span className="block text-sm text-text-secondary font-medium">Core Web Vitals Boost</span>
-            </div>
-            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                300+
-              </span>
-              <span className="block text-sm text-text-secondary font-medium">Microservices Supported</span>
-            </div>
-            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                30%
-              </span>
-              <span className="block text-sm text-text-secondary font-medium">Search Performance Gain</span>
-            </div>
-            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                11+
-              </span>
-              <span className="block text-sm text-text-secondary font-medium">Years of Experience</span>
-            </div>
+          {/* Career Highlights - Responsive Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-10 lg:mb-12 animate-fade-in-up [animation-delay:0.8s] [animation-fill-mode:backwards]">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="text-center p-3 sm:p-4 lg:p-6 bg-primary/10 rounded-lg sm:rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]"
+              >
+                <span className="block text-2xl xs:text-3xl sm:text-4xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-1 sm:mb-2">
+                  {stat.value}
+                </span>
+                <span className="block text-xs sm:text-sm text-text-secondary font-medium leading-tight">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex justify-center gap-6 md:flex-col animate-fade-in-up [animation-delay:1s] [animation-fill-mode:backwards]">
-            <button className="btn btn-primary" onClick={scrollToContact}>
+          <div className="flex flex-col xs:flex-row justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 animate-fade-in-up [animation-delay:1s] [animation-fill-mode:backwards]">
+            <button
+              className="btn btn-primary w-full xs:w-auto"
+              onClick={scrollToContact}
+            >
               Get In Touch
             </button>
             <button
-              className="group relative px-8 py-4 bg-dark-light border border-success/50 text-success font-semibold rounded-lg transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_20px_rgba(100,255,218,0.25)] active:translate-y-[2px] active:shadow-[0_2px_8px_rgba(100,255,218,0.2)]"
+              className="group relative w-full xs:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-dark-light border border-success/50 text-success font-semibold rounded-lg transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_20px_rgba(100,255,218,0.25)] active:translate-y-[2px] active:shadow-[0_2px_8px_rgba(100,255,218,0.2)]"
               onClick={scrollToExperience}
               style={{ boxShadow: '0 4px 14px rgba(100,255,218,0.15)' }}
             >
-              <span className="flex items-center justify-center gap-3">
+              <span className="flex items-center justify-center gap-2 sm:gap-3">
                 View My Work
                 <span className="relative w-5 h-5">
                   {/* Eye icon - visible by default */}

@@ -23,8 +23,9 @@
     @apply bg-primary text-text-primary;
   }
 
+  /* Custom scrollbar - smaller on mobile */
   ::-webkit-scrollbar {
-    @apply w-3;
+    @apply w-2 sm:w-3;
   }
 
   ::-webkit-scrollbar-track {
@@ -42,27 +43,27 @@
 
 @layer components {
   .container {
-    @apply max-w-[1200px] mx-auto px-8 md:px-6;
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   .section-header {
-    @apply flex items-center mb-12 gap-4;
+    @apply flex items-center mb-8 sm:mb-10 lg:mb-12 gap-3 sm:gap-4;
   }
 
   .section-number {
-    @apply font-mono text-2xl md:text-xl text-success font-medium;
+    @apply font-mono text-lg sm:text-xl lg:text-2xl text-success font-medium;
   }
 
   .section-title {
-    @apply text-4xl md:text-3xl font-bold text-text-primary whitespace-nowrap;
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary whitespace-nowrap;
   }
 
   .section-line {
-    @apply flex-1 h-px bg-gradient-to-r from-text-muted to-transparent ml-4 md:hidden;
+    @apply flex-1 h-px bg-gradient-to-r from-text-muted to-transparent ml-2 sm:ml-4 hidden xs:block;
   }
 
   .btn {
-    @apply py-3.5 px-8 text-base font-medium border-none rounded-md cursor-pointer transition-all duration-300 no-underline inline-block font-sans;
+    @apply py-3 sm:py-3.5 px-6 sm:px-8 text-sm sm:text-base font-medium border-none rounded-md cursor-pointer transition-all duration-300 no-underline inline-block font-sans;
   }
 
   .btn-primary {
@@ -74,6 +75,18 @@
   }
 
   .btn-large {
-    @apply py-[1.125rem] px-10 text-lg;
+    @apply py-4 sm:py-[1.125rem] px-8 sm:px-10 text-base sm:text-lg;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

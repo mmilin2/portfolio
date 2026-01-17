@@ -59,7 +59,7 @@ const Experience: React.FC = () => {
       tech: ['React', 'Redux', 'Angular', 'C#', 'Event Store', 'Storybook', 'Selenium', 'Microservices']
     },
     {
-      company: 'Amadeus North America',
+      company: 'Amadeus NA',
       title: 'Software Engineer Intern',
       location: 'Waltham, MA',
       period: 'May 2016 - August 2016',
@@ -74,7 +74,7 @@ const Experience: React.FC = () => {
       tech: ['Java', 'JAX-RS', 'JavaScript', 'RESTful APIs', 'jQuery', 'Unix']
     },
     {
-      company: 'Amadeus Software Labs',
+      company: 'Amadeus Labs',
       title: 'Software Engineer',
       location: 'Bangalore, India',
       period: 'June 2013 - June 2015',
@@ -92,23 +92,25 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="py-24 px-8 bg-dark-darker">
+    <section id="experience" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-dark-darker">
       <div className="max-w-[1400px] mx-auto">
-        <div className="flex items-center gap-4 mb-12">
-          <span className="text-success font-mono text-xl">02.</span>
-          <h2 className="text-text-primary text-3xl font-bold m-0 whitespace-nowrap">Experience</h2>
-          <div className="h-[1px] bg-dark-light flex-1 ml-4"></div>
+        {/* Section Header */}
+        <div className="flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10 lg:mb-12">
+          <span className="text-success font-mono text-lg sm:text-xl">02.</span>
+          <h2 className="text-text-primary text-2xl sm:text-3xl font-bold m-0 whitespace-nowrap">Experience</h2>
+          <div className="h-[1px] bg-dark-light flex-1 ml-2 sm:ml-4 hidden xs:block"></div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8">
-          <div className="flex md:flex-col overflow-x-auto md:overflow-visible md:min-w-[200px] border-b-2 md:border-b-0 md:border-l-2 border-dark-light">
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 lg:gap-8">
+          {/* Company Tabs - Horizontal scroll on mobile, vertical on desktop */}
+          <div className="flex lg:flex-col overflow-x-auto lg:overflow-visible lg:min-w-[180px] xl:min-w-[200px] border-b-2 lg:border-b-0 lg:border-l-2 border-dark-light scrollbar-hide">
             {experiences.map((exp, index) => (
               <button
                 key={index}
-                className={`px-6 py-3 text-left bg-transparent border-none cursor-pointer font-mono text-sm transition-all duration-300 whitespace-nowrap md:border-l-2 border-b-2 md:border-b-0 ${
+                className={`px-4 sm:px-6 py-3 text-left bg-transparent border-none cursor-pointer font-mono text-xs sm:text-sm transition-all duration-300 whitespace-nowrap flex-shrink-0 lg:border-l-2 border-b-2 lg:border-b-0 -mb-[2px] lg:mb-0 lg:-ml-[2px] ${
                   activeJob === index
-                    ? 'text-success bg-dark-light/30 md:border-l-success border-b-success'
-                    : 'text-text-muted hover:text-success hover:bg-dark-light/20 md:border-l-transparent border-b-transparent'
+                    ? 'text-success bg-dark-light/30 lg:border-l-success border-b-success lg:border-b-transparent'
+                    : 'text-text-muted hover:text-success hover:bg-dark-light/20 lg:border-l-transparent border-b-transparent'
                 }`}
                 onClick={() => setActiveJob(index)}
               >
@@ -117,34 +119,38 @@ const Experience: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex-1 min-h-[400px]">
-            <div className="space-y-6">
-              <div className="space-y-2">
-                <h3 className="text-text-primary text-2xl font-semibold m-0">
+          {/* Job Details */}
+          <div className="flex-1 min-h-[350px] sm:min-h-[400px]">
+            <div className="space-y-4 sm:space-y-6">
+              {/* Job Title and Info */}
+              <div className="space-y-1 sm:space-y-2">
+                <h3 className="text-text-primary text-lg sm:text-xl lg:text-2xl font-semibold m-0 leading-tight">
                   {experiences[activeJob].title}
                   <span className="text-success"> @ {experiences[activeJob].company}</span>
                 </h3>
-                <p className="text-text-muted text-sm font-mono m-0">{experiences[activeJob].period}</p>
-                <p className="text-text-secondary text-sm m-0">{experiences[activeJob].location}</p>
+                <p className="text-text-muted text-xs sm:text-sm font-mono m-0">{experiences[activeJob].period}</p>
+                <p className="text-text-secondary text-xs sm:text-sm m-0">{experiences[activeJob].location}</p>
               </div>
 
-              <ul className="space-y-4 list-none m-0 p-0">
+              {/* Highlights */}
+              <ul className="space-y-3 sm:space-y-4 list-none m-0 p-0">
                 {experiences[activeJob].highlights.map((highlight, index) => (
                   <li
                     key={index}
-                    className="text-text-secondary text-base leading-relaxed pl-7 relative"
+                    className="text-text-secondary text-sm sm:text-base leading-relaxed pl-5 sm:pl-7 relative"
                   >
-                    <span className="absolute left-0 top-0 text-success text-lg">▹</span>
+                    <span className="absolute left-0 top-0 text-success text-base sm:text-lg">▹</span>
                     {highlight}
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 pt-4">
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-2 sm:pt-4">
                 {experiences[activeJob].tech.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1.5 bg-dark-light text-success text-xs font-mono rounded border border-success/30 transition-all duration-300 hover:bg-success/10 hover:border-success"
+                    className="px-2 sm:px-3 py-1 sm:py-1.5 bg-dark-light text-success text-[10px] sm:text-xs font-mono rounded border border-success/30 transition-all duration-300 hover:bg-success/10 hover:border-success"
                   >
                     {tech}
                   </span>
