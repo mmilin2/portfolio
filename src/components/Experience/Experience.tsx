@@ -128,12 +128,13 @@ const Experience: React.FC = () => {
                 <p className="text-text-secondary text-sm m-0">{experiences[activeJob].location}</p>
               </div>
 
-              <ul className="space-y-4 pl-5">
+              <ul className="space-y-4 list-none m-0 p-0">
                 {experiences[activeJob].highlights.map((highlight, index) => (
                   <li
                     key={index}
-                    className="text-text-secondary text-base leading-relaxed relative before:content-['▹'] before:absolute before:-left-5 before:text-success before:text-xl before:leading-3"
+                    className="text-text-secondary text-base leading-relaxed pl-7 relative"
                   >
+                    <span className="absolute left-0 top-0 text-success text-lg">▹</span>
                     {highlight}
                   </li>
                 ))}

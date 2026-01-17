@@ -52,12 +52,13 @@ const Education: React.FC = () => {
                   </div>
                   <h4 className="text-text-secondary text-lg font-medium m-0">{edu.school}</h4>
                   <p className="text-text-muted text-sm m-0">{edu.location}</p>
-                  <ul className="space-y-2 pl-5">
+                  <ul className="space-y-2 list-none m-0 p-0">
                     {edu.highlights.map((highlight, idx) => (
                       <li
                         key={idx}
-                        className="text-text-secondary text-sm leading-relaxed relative before:content-['▹'] before:absolute before:-left-5 before:text-success before:text-lg before:leading-3"
+                        className="text-text-secondary text-sm leading-relaxed pl-6 relative"
                       >
+                        <span className="absolute left-0 top-0 text-success text-base">▹</span>
                         {highlight}
                       </li>
                     ))}

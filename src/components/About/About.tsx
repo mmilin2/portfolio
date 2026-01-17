@@ -26,17 +26,21 @@ const About: React.FC = () => {
               At Specialty Program Group, I currently lead UI development initiatives, where I've achieved
               remarkable results including:
             </p>
-            <ul className="space-y-3 pl-5">
-              <li className="text-text-secondary text-base leading-relaxed relative before:content-['▹'] before:absolute before:-left-5 before:text-success before:text-xl before:leading-3">
+            <ul className="space-y-3 list-none m-0 p-0">
+              <li className="text-text-secondary text-base leading-relaxed pl-7 relative">
+                <span className="absolute left-0 top-0 text-success text-lg">▹</span>
                 Improved core web vitals by 35-40% through strategic performance optimization
               </li>
-              <li className="text-text-secondary text-base leading-relaxed relative before:content-['▹'] before:absolute before:-left-5 before:text-success before:text-xl before:leading-3">
+              <li className="text-text-secondary text-base leading-relaxed pl-7 relative">
+                <span className="absolute left-0 top-0 text-success text-lg">▹</span>
                 Reduced deployment artifact size by 20% through enhanced code reusability
               </li>
-              <li className="text-text-secondary text-base leading-relaxed relative before:content-['▹'] before:absolute before:-left-5 before:text-success before:text-xl before:leading-3">
+              <li className="text-text-secondary text-base leading-relaxed pl-7 relative">
+                <span className="absolute left-0 top-0 text-success text-lg">▹</span>
                 Increased website search performance by 30% with custom GraphQL modules
               </li>
-              <li className="text-text-secondary text-base leading-relaxed relative before:content-['▹'] before:absolute before:-left-5 before:text-success before:text-xl before:leading-3">
+              <li className="text-text-secondary text-base leading-relaxed pl-7 relative">
+                <span className="absolute left-0 top-0 text-success text-lg">▹</span>
                 Led development of component libraries and UI testing frameworks
               </li>
             </ul>
