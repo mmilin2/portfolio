@@ -71,12 +71,10 @@ const Hero: React.FC = () => {
 
       {/* Hero Content */}
       <div className="relative z-[2] max-w-[1200px] p-8">
-        <div className="flex items-start gap-12 lg:flex-col lg:items-center">
-          {/* Text Content */}
-          <div className="max-w-[700px] lg:text-center">
-            <p className="font-mono text-lg text-success mb-4 animate-fade-in-up">
-              Hi, my name is
-            </p>
+        <div className="max-w-[900px]">
+          <p className="font-mono text-lg text-success mb-4 animate-fade-in-up">
+            Hi, my name is
+          </p>
           <h1 className="text-6xl md:text-5xl sm:text-4xl font-extrabold mb-4 animate-fade-in-up [animation-delay:0.2s] [animation-fill-mode:backwards] leading-tight">
             <span className="bg-gradient-to-r from-success via-primary to-accent bg-clip-text text-transparent">
               Milind
@@ -120,29 +118,13 @@ const Hero: React.FC = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex gap-6 md:flex-col lg:justify-center animate-fade-in-up [animation-delay:1s] [animation-fill-mode:backwards]">
+          <div className="flex gap-6 md:flex-col animate-fade-in-up [animation-delay:1s] [animation-fill-mode:backwards]">
             <button className="btn btn-primary" onClick={scrollToContact}>
               Get In Touch
             </button>
             <button className="btn btn-secondary" onClick={scrollToExperience}>
               View My Work
             </button>
-          </div>
-          </div>
-
-          {/* Profile Image */}
-          <div className="flex-shrink-0 animate-fade-in-up [animation-delay:0.4s] [animation-fill-mode:backwards]">
-            <div className="relative">
-              <div className="w-64 h-64 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary/30 shadow-[0_0_40px_rgba(102,126,234,0.3)] transition-all duration-300 hover:border-primary hover:shadow-[0_0_60px_rgba(102,126,234,0.5)]">
-                <img
-                  src={process.env.PUBLIC_URL + '/profile.jpg'}
-                  alt="Milind - Tech Lead & Senior Software Engineer"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Decorative ring */}
-              <div className="absolute -inset-3 border-2 border-dashed border-success/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
-            </div>
           </div>
         </div>
       </div>

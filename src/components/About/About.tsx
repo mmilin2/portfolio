@@ -58,15 +58,13 @@ const About: React.FC = () => {
           <div className="space-y-6">
             <div className="relative max-w-[350px] mx-auto">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary to-success rounded opacity-20 blur-xl"></div>
-              <div className="relative rounded-lg overflow-hidden border-2 border-success/30 bg-dark-light p-8 transition-transform duration-300 hover:-translate-y-2 group">
-                <div className="absolute inset-0 bg-success/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative flex items-center justify-center">
-                  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-                    <circle cx="100" cy="100" r="90" fill="#667eea" opacity="0.1"/>
-                    <circle cx="100" cy="75" r="30" fill="#667eea"/>
-                    <path d="M 50 150 Q 100 130 150 150 L 150 200 L 50 200 Z" fill="#667eea"/>
-                  </svg>
-                </div>
+              <div className="relative rounded-lg overflow-hidden border-2 border-success/30 transition-transform duration-300 hover:-translate-y-2 group">
+                <div className="absolute inset-0 bg-success/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+                <img
+                  src={process.env.PUBLIC_URL + '/profile.jpg'}
+                  alt="Milind - Tech Lead & Senior Software Engineer"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
             <div className="bg-dark-light rounded-lg p-6 space-y-4">
