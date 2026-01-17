@@ -89,25 +89,31 @@ const Hero: React.FC = () => {
             Specialized in building scalable applications while mentoring distributed teams to deliver exceptional results.
           </p>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 md:grid-cols-1 md:gap-4 mb-12 animate-fade-in-up [animation-delay:0.8s] [animation-fill-mode:backwards]">
+          {/* Career Highlights */}
+          <div className="grid grid-cols-4 gap-6 lg:grid-cols-2 md:grid-cols-1 md:gap-4 mb-12 animate-fade-in-up [animation-delay:0.8s] [animation-fill-mode:backwards]">
+            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
+              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
+                40%
+              </span>
+              <span className="block text-sm text-text-secondary font-medium">Core Web Vitals Boost</span>
+            </div>
+            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
+              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
+                300+
+              </span>
+              <span className="block text-sm text-text-secondary font-medium">Microservices Supported</span>
+            </div>
+            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
+              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
+                30%
+              </span>
+              <span className="block text-sm text-text-secondary font-medium">Search Performance Gain</span>
+            </div>
             <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
               <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
                 11+
               </span>
-              <span className="block text-sm text-text-secondary font-medium">Years Experience</span>
-            </div>
-            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                15%
-              </span>
-              <span className="block text-sm text-text-secondary font-medium">Team Throughput Increase</span>
-            </div>
-            <div className="text-center p-6 md:p-4 bg-primary/10 rounded-xl border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_10px_30px_rgba(102,126,234,0.2)]">
-              <span className="block text-4xl md:text-3xl font-bold bg-gradient-to-r from-success to-primary bg-clip-text text-transparent mb-2">
-                4
-              </span>
-              <span className="block text-sm text-text-secondary font-medium">Offshore Engineers Led</span>
+              <span className="block text-sm text-text-secondary font-medium">Years of Experience</span>
             </div>
           </div>
 
