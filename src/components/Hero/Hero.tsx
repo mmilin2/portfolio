@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
               onClick={scrollToExperience}
               style={{ boxShadow: '0 4px 14px rgba(100,255,218,0.15)' }}
             >
-              <span className="flex items-center gap-3">
+              <span className="flex items-center justify-center gap-3">
                 View My Work
                 <span className="relative w-5 h-5">
                   {/* Eye icon - visible by default */}
