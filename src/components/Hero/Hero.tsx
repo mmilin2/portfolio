@@ -122,19 +122,20 @@ const Hero: React.FC = () => {
             <button className="btn btn-primary" onClick={scrollToContact}>
               Get In Touch
             </button>
-            <button className="btn btn-secondary" onClick={scrollToExperience}>
-              View My Work
+            <button
+              className="group relative px-8 py-4 bg-transparent border-2 border-success text-success font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:text-dark-darker"
+              onClick={scrollToExperience}
+            >
+              <span className="absolute inset-0 bg-success transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+              <span className="relative flex items-center gap-2">
+                View My Work
+                <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
             </button>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in-up [animation-delay:1.2s] [animation-fill-mode:backwards] z-10">
-        <div className="w-6 h-10 border-2 border-text-secondary rounded-full relative">
-          <div className="w-1 h-2 bg-success rounded-full absolute top-2 left-1/2 -translate-x-1/2 animate-scroll"></div>
-        </div>
-        <p className="text-xs text-text-secondary uppercase tracking-[2px]">Scroll</p>
       </div>
     </section>
   );
