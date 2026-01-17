@@ -123,15 +123,33 @@ const Hero: React.FC = () => {
               Get In Touch
             </button>
             <button
-              className="group relative px-8 py-4 bg-transparent border-2 border-success text-success font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:text-dark-darker"
+              className="group relative px-8 py-4 bg-dark-light border border-success/50 text-success font-semibold rounded-lg transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_20px_rgba(100,255,218,0.25)] active:translate-y-[2px] active:shadow-[0_2px_8px_rgba(100,255,218,0.2)]"
               onClick={scrollToExperience}
+              style={{ boxShadow: '0 4px 14px rgba(100,255,218,0.15)' }}
             >
-              <span className="absolute inset-0 bg-success transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
-              <span className="relative flex items-center gap-2">
+              <span className="flex items-center gap-3">
                 View My Work
-                <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <span className="relative w-5 h-5">
+                  {/* Eye icon - visible by default */}
+                  <svg
+                    className="absolute inset-0 w-5 h-5 transition-all duration-300 opacity-100 group-hover:opacity-0 group-hover:scale-75"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  {/* Rocket icon - visible on hover */}
+                  <svg
+                    className="absolute inset-0 w-5 h-5 transition-all duration-300 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 group-hover:rotate-[-45deg]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                  </svg>
+                </span>
               </span>
             </button>
           </div>
